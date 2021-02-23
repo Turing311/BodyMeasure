@@ -229,6 +229,7 @@ def index():
 def predict():
     if request.method == 'POST':
         # Get the image from post request
+        print(request.json)
         image = base64_to_pil(request.json.image)
         height = request.json.height
         res_im,seg=MODEL.run(image)
