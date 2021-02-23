@@ -262,7 +262,7 @@ def predict():
         #return jsonify(result=result, probability=pred_proba)
         obj = ''
         with open('test.obj', 'r') as file:
-            obj = file.read().replace('\n', '')
+            obj = file.read()
         return jsonify(result=result, obj=obj)
 
     return None
