@@ -260,7 +260,10 @@ def predict():
         
         # Serialize the result, you can add additional fields
         #return jsonify(result=result, probability=pred_proba)
-        return jsonify(result=result)
+        obj = ''
+        with open('test.obj', 'r') as file:
+            obj = file.read().replace('\n', '')
+        return jsonify(result=result, obj=obj)
 
     return None
 
