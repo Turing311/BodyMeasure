@@ -229,9 +229,8 @@ def index():
 def predict():
     if request.method == 'POST':
         # Get the image from post request
-        print(request.json)
-        image = base64_to_pil(request.json.image)
-        height = request.json.height
+        image = base64_to_pil(request.json['image'])
+        height = int(request.json['height'])
         res_im,seg=MODEL.run(image)
 
         seg=cv2.resize(seg.astype(np.uint8),image.size)
