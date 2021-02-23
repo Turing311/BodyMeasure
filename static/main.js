@@ -84,7 +84,7 @@ function previewFile(file) {
   var reader = new FileReader();
   reader.readAsDataURL(file);
   reader.onloadend = () => {
-    imagePreview.src = render.result//URL.createObjectURL(file);
+    imagePreview.src = reader.result//URL.createObjectURL(file);
 
     show(imagePreview);
     hide(uploadCaption);
