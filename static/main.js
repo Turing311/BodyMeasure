@@ -91,9 +91,9 @@ function previewFile(file) {
 
     // reset
     predResult.innerHTML = "";
-    imageDisplay.classList.remove("loading");
+//    imageDisplay.classList.remove("loading");
 
-    displayImage(reader.result, "image-display");
+//    displayImage(reader.result, "image-display");
   };
 }
 
