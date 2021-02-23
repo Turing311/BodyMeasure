@@ -229,7 +229,8 @@ def index():
 def predict():
     if request.method == 'POST':
         # Get the image from post request
-        image = base64_to_pil(request.json)
+        image = base64_to_pil(request.json.image)
+		height = request.json.height
         res_im,seg=MODEL.run(image)
 
         seg=cv2.resize(seg.astype(np.uint8),image.size)
@@ -241,7 +242,7 @@ def predict():
 
         res = cv2.bitwise_and(img,img,mask = mask)
         bg_removed = res + (255 - cv2.cvtColor(mask, cv2.COLOR_GRAY2BGR)) 
-        result = main(bg_removed,180,None)
+        result = main(bg_removed,height,None)
         # Save the image to ./uploads
         # img.save("./uploads/image.png")
 

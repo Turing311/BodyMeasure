@@ -36,7 +36,7 @@ body {
 .main {
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -114,8 +114,8 @@ body {
 }
 
 #pred-result {
-  color: white;
-  font-size: 1.5rem;
+  color: black;
+  font-size: 0.8rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -162,4 +162,21 @@ body {
     stroke-dashoffset: -65.973;
     transform: rotate(90deg);
   }
+}
+
+video { display: block; width: 60%; height: auto; }
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.left {
+  width: 30%;
+}
+.mid {
+  width: 40%;
+}
+.right {
+  width: 30%;
 }
