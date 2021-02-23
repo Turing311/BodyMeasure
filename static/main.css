@@ -63,8 +63,8 @@ body {
   font-size: 0.8rem;
   color: #666666;
   cursor: pointer;
-  width: 16rem;
-  height: 10rem;
+  width: 20rem;
+  height: 24rem;
   background: #fff;
   border: 0.1rem dashed #838388;
   border-radius: 0.4rem;
@@ -87,8 +87,8 @@ body {
 }
 
 .upload-box #image-preview {
-  max-width: 14rem;
-  max-height: 8rem;
+  max-width: 18rem;
+  max-height: 20rem;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -115,7 +115,7 @@ body {
 
 #pred-result {
   color: black;
-  font-size: 0.8rem;
+  font-size: 1rem;
   position: absolute;
   top: 50%;
   left: 50%;
