@@ -134,7 +134,7 @@ def extract_measurements(height, vertices):
             fp.write( 'f %d %d %d\n' %  (f[0] + 1, f[1] + 1, f[2] + 1) )
 
         
-    print("Model Saved...")
+    # print("Model Saved...")
     return result
 
 
