@@ -44,6 +44,7 @@ PART = [(0.0, np.float64(0.66666700000000001), 1.0),
 
 # save obj file
 def save_obj(filename, v, f):
+  print(filename)
   file = open(filename, 'w')
   for i in range(0, v.shape[0]):
     file.write('v %f %f %f\n'%(v[i][0], v[i][1], v[i][2]))
