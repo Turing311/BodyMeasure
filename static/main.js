@@ -132,6 +132,7 @@ function displayImage(image, id) {
   show(display);
 }
 
+var obj_content = ''
 function displayResult(data) {
   // display the result
   // imageDisplay.classList.remove("loading");
@@ -139,7 +140,32 @@ function displayResult(data) {
   predResult.innerHTML = data.result;
   show(predResult);
   clearScene()
+  obj_content = data.obj
   showOBJ(data.obj)
+}
+  
+function download(data, filename, type) {
+    var file = new Blob([data], {type: type});
+    if (window.navigator.msSaveOrOpenBlob) // IE10+
+        window.navigator.msSaveOrOpenBlob(file, filename);
+    else { // Others
+        var a = document.createElement("a"),
+                url = URL.createObjectURL(file);
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function() {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);  
+        }, 0); 
+    }
+}
+
+function downloadObj() {
+  if(obj_content != '') {
+    download(obj_content, 'mesh.obj', 'text/plain');
+  }
 }
 
 function hide(el) {
