@@ -167,6 +167,8 @@ body {
 video { display: block; width: 60%; height: auto; }
 
 .container {
+  padding:50px;
+  margin: 20px;
   height: 100%;
   width: 100%;
   display: flex;

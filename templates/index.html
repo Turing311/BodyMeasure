@@ -2,10 +2,11 @@
 
 <div class="main container">
   <div class="left">
-    <h2>Live Preview</h2>
+    <h1>Xperience Shopping</h1>
+    <h2>API Preview</h2>
     <video id="capturevideo" autoplay></video>
     </br>
-    <button id="shutterbutton">Shutter ( Picture taken after 10 seconds.)</button>    
+    <button id="shutterbutton">Webcam (10 second timer)</button>    
   </div>
 
   <div class="mid panel">
@@ -17,7 +18,7 @@
     </label>
     
     <div style="margin-bottom: 2rem;">
-      Height: <input id="height" type="number" value="190"></br></br>
+      Height (in cm): <input id="height" type="number" value="180"></br></br>
       <input type="button" value="Submit" class="button" onclick="submitImage();" />
       <input type="button" value="Clear" class="button" onclick="clearImage();" />
     </div>  
@@ -27,5 +28,6 @@
     <div id="pred-result" class="hidden"></div>
   </div>
 </div>
+<div id="container"></div>
 
 {% endblock %}
