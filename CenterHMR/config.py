@@ -49,7 +49,7 @@ train_group.add_argument('--epoch', type = int, default = 300, help = 'training 
 train_group.add_argument('--fine_tune',type = bool,default = False,help = 'whether to run online')
 train_group.add_argument('--lr', help='lr',default=3e-4,type=float)
 train_group.add_argument('--weight_decay', help='weight_decay',default=1e-5,type=float)
-train_group.add_argument('--gpu',default='-1',help='gpus',type=str)
+train_group.add_argument('--gpu',default='0',help='gpus',type=str)
 train_group.add_argument('--batch_size',default=64,help='batch_size',type=int)
 train_group.add_argument('--val_batch_size',default=64,help='valiation batch_size',type=int)
 train_group.add_argument('--nw',default=4,help='number of workers',type=int)

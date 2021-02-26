@@ -20,7 +20,7 @@ class Demo(Base):
         self.save_dict_results = args.save_dict_results
         self.demo_dir = os.path.join(config.project_dir, 'demo')
         self.vis_size = [1024,1024,3]#[1920,1080]
-        if not args.webcam and '-1' not in self.gpu:
+        if not args.webcam and '2' in self.gpu:
             self.visualizer = Visualizer(model_type=self.model_type,resolution=self.vis_size, input_size=self.input_size,with_renderer=True)
         else:
             self.save_visualization_on_img = False
@@ -31,7 +31,7 @@ class Demo(Base):
         print('Processing {}'.format(image_folder))
         test_save_dir = image_folder+'_results' if not os.path.isdir(self.output_dir) else os.path.join(self.output_dir, image_folder.split('/')[-1])
         os.makedirs(test_save_dir,exist_ok=True)
-        if '-1' not in self.gpu:
+        if '2' in self.gpu:
             self.visualizer.result_img_dir = test_save_dir
         counter = Time_counter(thresh=1)
         for i in range(4):
